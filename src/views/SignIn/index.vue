@@ -35,7 +35,7 @@ export default {
       email: null,
       password: null,
       remember_me: false
-    }
+    };
   },
   methods: {
     signin: function() {
