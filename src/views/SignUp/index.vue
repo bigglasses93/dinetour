@@ -4,19 +4,22 @@
         <v-container>
           <v-layout row>
             <v-flex xs12>
-              <h1>Sign Up</h1>
+              <v-toolbar dark>
+                <v-toolbar-title>Sign Up</v-toolbar-title>
+              </v-toolbar>
 
-              <v-text-field v-model="name" placeholder="name">
+              <v-text-field v-model="name" label="name">
               </v-text-field>
 
-              <v-text-field v-model="email" placeholder="email">
+              <v-text-field v-model="email" label="email">
               </v-text-field>
 
 
-              <v-text-field type="password" v-model="password" placeholder="password">
+              <v-text-field type="password" v-model="password" label="password">
               </v-text-field>
 
-              <v-text-field type="confirm password" placeholder="confirm password">
+              <v-text-field type="confirm password" v-model="confirm_password"
+                label="confirm password">
               </v-text-field>
 
 
@@ -37,21 +40,24 @@ import firebase from "firebase";
 export default {
   name: "SignUp",
   data() {
-      return {
-        email: null,
-        password: null
-      }
+    return {
+      email: null,
+      password: null,
+      confirm_password: null
+    };
   },
   methods: {
-    signUp: function () {
-    firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
-    .then(user => {
-    alert('Create account: ', this.email);
-    console.log(user);
-    })
-    .catch(error => {
-    alert(error.message);
-    });
+    signUp: function() {
+      firebase
+        .auth()
+        .createUserWithEmailAndPassword(this.email, this.password)
+        .then(user => {
+          alert("Create account: ", this.email);
+          console.log(user);
+        })
+        .catch(error => {
+          alert(error.message);
+        });
     }
   }
 };
