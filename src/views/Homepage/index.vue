@@ -3,17 +3,6 @@
     <v-form>
       <v-container>
         <v-layout column justify-center>
-  
-      <v-toolbar>
-        <v-toolbar-side-icon></v-toolbar-side-icon>
-        <v-spacer></v-spacer>
-        <v-toolbar-items class="hidden-sm-and-down">
-          <v-btn flat>About</v-btn>
-          <v-btn flat>Contacts</v-btn>
-          <v-btn flat>Logein</v-btn>
-          <v-btn flat>Signup</v-btn>
-        </v-toolbar-items>
-      </v-toolbar>
 
       <v-carousel>
         <v-carousel-item
@@ -25,12 +14,13 @@
 
       <div class="text-xs-center">
         <v-menu transition="Sign-in">
-          <v-btn slot="activator" dark color="primary">Slide X Transition</v-btn>
+          <v-btn slot="activator" dark color="primary">Sign in</v-btn>
         </v-menu>
         <v-menu transition="Sign-out">
-          <v-btn slot="activator" dark color="secondary">Slide X Reverse Transition</v-btn>
+          <v-btn slot="activator" dark color="secondary">Sign up</v-btn>
         </v-menu>
       </div>
+
         </v-layout>
       </v-container>
     </v-form>
