@@ -4,8 +4,8 @@ import Home from "@/views/Home";
 import Users from "@/views/Users";
 import User from "@/views/User";
 import Layout from "@/views/Layout";
-import Teams from "@/views/Teams";
-import Team from "@/views/Team";
+import Events from "@/views/Events";
+import Event from "@/views/Event";
 import SignUp from "@/views/SignUp";
 import SignIn from "@/views/SignIn";
 import Todo from "@/views/Todo";
@@ -38,14 +38,14 @@ const router = new Router({
           props: true
         },
         {
-          path: "/teams",
-          name: "teams",
-          component: Teams
+          path: "/events",
+          name: "events",
+          component: Events
         },
         {
-          path: "/teams/:teamId",
-          name: "team",
-          component: Team,
+          path: "/events/:eventId",
+          name: "event",
+          component: Event,
           props: true
         },
         {

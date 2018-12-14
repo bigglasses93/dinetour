@@ -1,5 +1,6 @@
 import users from "./db/users";
 import teams from "./db/teams";
+import events from "./db/events";
 
 export default {
   fetchUsers() {
@@ -8,10 +9,10 @@ export default {
   fetchUser(userId) {
     return users.find(user => user.id === Number(userId));
   },
-  fetchTeams() {
-    return teams;
+  fetchEvents() {
+    return events;
   },
-  fetchTeam(teamId) {
-    return teams.find(team => team.id === Number(teamId));
+  fetchEvent(eventId) {
+    return events.find(event => event.id === Number(eventId));
   }
 };
