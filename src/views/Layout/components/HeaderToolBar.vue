@@ -61,7 +61,7 @@
       dense
       fixed
       clipped-left
-      dark
+      dark=""
       app 
     > 
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
@@ -72,7 +72,7 @@
       <v-layout row align-center style="max-width: 650px">
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
-          <v-btn flat>About</v-btn>
+          <v-btn flat to="/Homepage">Homepage</v-btn>
           <v-btn flat to="/Contactus">Contactus</v-btn>
           <v-btn flat to="/signin">Login</v-btn>
           <v-btn flat to="/signup">Signup</v-btn>
