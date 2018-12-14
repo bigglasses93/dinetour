@@ -10,7 +10,7 @@ import SignUp from "@/views/SignUp";
 import SignIn from "@/views/SignIn";
 import Todo from "@/views/Todo";
 import CreateEvent from "@/views/CreateEvent";
-
+import ApplyEvent from "@/views/ApplyEvent";
 
 Vue.use(Router);
 
@@ -68,6 +68,11 @@ const router = new Router({
           path: "/create-event",
           name: "create-event",
           component: CreateEvent
+        },
+        {
+          path: "/apply-event",
+          name: "apply-event",
+          component: ApplyEvent
         }
       ]
     }
