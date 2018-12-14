@@ -13,11 +13,11 @@
               <v-text-field type="password" v-model="password" placeholder="password">
               </v-text-field>
               <v-checkbox
-                :label="`Remember Me`"
-                v-model="checkbox"
+                label="Remember Me"
+                v-model="remember_me"
               ></v-checkbox> 
               <v-btn v-on:click="signin">SignIn</v-btn>
-              <v-btn v-on:click="create">Create Account</v-btn>
+              <v-btn to="/signup">Create Account</v-btn>
             </v-flex>
           </v-layout>
               
@@ -29,38 +29,28 @@
 <script>
 import firebase from "firebase";
 export default {
-  name:"checkbox",
-  data () {
-      return {
-        checkbox: true
-      }
-    },
   name: "SignIn",
   data() {
-      return {
-        email: null,
-        password: null
-      }
-  },
-  name: "Create Account",
-  data() {
-      return {
-        email: null,
-        password: null
-      }
+    return {
+      email: null,
+      password: null,
+      remember_me: false
+    }
   },
   methods: {
-    signin: function () {
-      firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
-       user => {
-         alert('Success!')
-         this.$router.push('/')
-       },
-
-       err => {
-         alert(err.message)
-       }
-     )
+    signin: function() {
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(this.email, this.password)
+        .then(
+          () => {
+            alert("Success!");
+            this.$router.push("/");
+          },
+          err => {
+            alert(err.message);
+          }
+        );
     }
   }
 };
