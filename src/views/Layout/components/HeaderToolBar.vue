@@ -21,6 +21,13 @@
             </v-list-tile-action>
             Hosts
           </v-list-tile>
+
+          <v-list-tile to="/events">
+            <v-list-tile-action>
+              <v-icon>event</v-icon>
+            </v-list-tile-action>
+            Events
+          </v-list-tile>
           
           <v-list-tile to="/signup">
             <v-list-tile-action>
