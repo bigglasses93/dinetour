@@ -3,7 +3,7 @@
     <v-container>
       <v-layout row>
         <v-flex xs12>
-          <h1>PBC #4 TopPage</h1>
+          <h1>This is the top page of DineTour.</h1>
         </v-flex>
       </v-layout>
     </v-container>
