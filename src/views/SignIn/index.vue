@@ -2,6 +2,7 @@
   <div>
       <v-content>
         <v-container>
+          
           <v-layout row>
             <v-flex xs12>
               <h3>SignIn</h3>
@@ -9,9 +10,15 @@
               </v-text-field>
               <v-text-field type="password" v-model="password" placeholder="password">
               </v-text-field>
+              <v-checkbox
+                :label="`Remember Me`"
+                v-model="checkbox"
+              ></v-checkbox> 
               <v-btn v-on:click="signin">SignIn</v-btn>
+              <v-btn v-on:click="create">Create Account</v-btn>
             </v-flex>
           </v-layout>
+              
         </v-container>
       </v-content>
   </div>
@@ -20,7 +27,20 @@
 <script>
 import firebase from "firebase";
 export default {
+  name:"checkbox",
+  data () {
+      return {
+        checkbox: true
+      }
+    },
   name: "SignIn",
+  data() {
+      return {
+        email: null,
+        password: null
+      }
+  },
+  name: "Create Account",
   data() {
       return {
         email: null,

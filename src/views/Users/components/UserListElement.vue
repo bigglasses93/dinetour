@@ -20,10 +20,6 @@
       <v-card-title v-text="user.email"></v-card-title>
     </v-card-actions>
     
-    <v-card-actions>
-      <v-icon>people</v-icon>
-      <v-card-title v-if="user.team" v-text="user.team.name"></v-card-title>
-    </v-card-actions>
   </v-card>
 </template>
 
