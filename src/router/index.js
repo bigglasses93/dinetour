@@ -9,6 +9,7 @@ import Team from "@/views/Team";
 import SignUp from "@/views/SignUp";
 import SignIn from "@/views/SignIn";
 import Todo from "@/views/Todo";
+import CreateEvent from "@/views/CreateEvent";
 
 
 Vue.use(Router);
@@ -62,6 +63,11 @@ const router = new Router({
           path: "/todo",
           name: "todo",
           component: Todo
+        },
+        {
+          path: "/create-event",
+          name: "create-event",
+          component: CreateEvent
         }
       ]
     }
