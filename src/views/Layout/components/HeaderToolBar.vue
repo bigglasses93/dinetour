@@ -57,26 +57,26 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar
-      color="blue"
+      color="black"
       dense
       fixed
       clipped-left
       dark
-      app
-    >
+      app 
+    > 
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title class="mr-5 align-center">
+      <v-toolbar-title class="mr-5 align-center white--text">
         <span class="title">DineTour</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-layout row align-center style="max-width: 650px">
-        <v-text-field
-          placeholder="Search..."
-          single-line
-          append-icon="search"
-          color="white"
-          hide-details
-        ></v-text-field>
+        <v-spacer></v-spacer>
+        <v-toolbar-items class="hidden-sm-and-down">
+          <v-btn flat>About</v-btn>
+          <v-btn flat>Contacts</v-btn>
+          <v-btn flat>Login</v-btn>
+          <v-btn flat>Signup</v-btn>
+        </v-toolbar-items>
       </v-layout>
     </v-toolbar>
   </div>
