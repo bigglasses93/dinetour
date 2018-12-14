@@ -12,7 +12,7 @@ import Todo from "@/views/Todo";
 import Homepage from "@/views/Homepage";
 import CreateEvent from "@/views/CreateEvent";
 import ApplyEvent from "@/views/ApplyEvent";
-import ContactUs from "@/views/ContactUs";
+import Contactus from "@/views/ContactUs";
 
 Vue.use(Router);
 
@@ -84,7 +84,7 @@ const router = new Router({
         {
           path: "/contactus",
           name: "contactus",
-          component: ContactUs
+          component: Contactus
         }
       ]
     }
