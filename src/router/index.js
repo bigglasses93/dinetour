@@ -9,6 +9,7 @@ import Event from "@/views/Event";
 import SignUp from "@/views/SignUp";
 import SignIn from "@/views/SignIn";
 import Todo from "@/views/Todo";
+import Homepage from "@/views/Homepage";
 import CreateEvent from "@/views/CreateEvent";
 import ApplyEvent from "@/views/ApplyEvent";
 
@@ -68,6 +69,11 @@ const router = new Router({
           path: "/create-event",
           name: "create-event",
           component: CreateEvent
+        },
+        {
+          path: "/homepage",
+          name: "homepage",
+          component: Homepage
         },
         {
           path: "/apply-event",
