@@ -73,9 +73,9 @@
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
           <v-btn flat>About</v-btn>
-          <v-btn flat>Contacts</v-btn>
-          <v-btn flat>Login</v-btn>
-          <v-btn flat>Signup</v-btn>
+          <v-btn flat to="/Contactus">Contactus</v-btn>
+          <v-btn flat to="/signin">Login</v-btn>
+          <v-btn flat to="/signup">Signup</v-btn>
         </v-toolbar-items>
       </v-layout>
     </v-toolbar>
