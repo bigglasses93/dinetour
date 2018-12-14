@@ -1,68 +1,47 @@
 export default [
   {
     id: 1,
-    name: "太郎",
+    name: "Kentaro",
     email: "tarou@example.com",
     password: "hogehoge",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
-    team: {
+    food: "chicken",
+    language: "Japanese",
+    intro: "I am Kentarou",
+    event: {
       id: 1,
-      name: "チームA"
+      name: "a",
+      date: "2018/11/20"
     }
   },
   {
     id: 2,
-    name: "次郎",
-    email: "zirou@example.com",
+    name: "Mapo",
+    email: "mapo@example.com",
     password: "hogehoge",
-    image: "https://randomuser.me/api/portraits/men/15.jpg",
-    team: {
+    image: "https://randomuser.me/api/portraits/men/6.jpg",
+    food: "tofu",
+    language: "Chinsese",
+    intro: "I am Mapo",
+    event: {
       id: 2,
-      name: "チームB"
+      name: "b",
+      date: "2018/12/21"
     }
   },
   {
     id: 3,
-    name: "三郎",
-    email: "saburou@example.com",
+    name: "Chris",
+    email: "tarou@example.com",
     password: "hogehoge",
-    image: "https://randomuser.me/api/portraits/men/20.jpg",
-    team: {
+    image: "https://randomuser.me/api/portraits/men/7.jpg",
+    food: "pork",
+    language: "English",
+    intro: "I am Chris",
+    event: {
       id: 3,
-      name: "チームC"
-    }
-  },
-  {
-    id: 4,
-    name: "四郎",
-    email: "shirou@example.com",
-    password: "hogehoge",
-    image: "",
-    team: {
-      id: 1,
-      name: "チームA"
-    }
-  },
-  {
-    id: 5,
-    name: "五郎",
-    email: "gorou@example.com",
-    password: "hogehoge",
-    image: "https://randomuser.me/api/portraits/men/23.jpg",
-    team: {
-      id: 1,
-      name: "チームA"
-    }
-  },
-  {
-    id: 6,
-    name: "六郎",
-    email: "rokurou@example.com",
-    password: "hogehoge",
-    image: "https://randomuser.me/api/portraits/men/1.jpg",
-    team: {
-      id: 1,
-      name: "チームA"
+      name: "c",
+      date: "2018/11/25"
     }
   }
 ];
