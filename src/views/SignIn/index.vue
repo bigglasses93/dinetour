@@ -17,7 +17,7 @@
                 v-model="remember_me"
               ></v-checkbox> 
               <v-btn v-on:click="signin">SignIn</v-btn>
-              <v-btn to="/signup">Create Account</v-btn>
+              <v-btn to="/signup" flat>Create Account</v-btn>
             </v-flex>
           </v-layout>
               
