@@ -5,6 +5,8 @@
         <v-flex xs12>
           <h1>This is the top page of DineTour.</h1>
         </v-flex>
+</template>
+
       </v-layout>
     </v-container>
   </v-content>
@@ -12,7 +14,7 @@
 
 <script>
 export default {
-  name: "Home",
+  name: "Home"
 };
 </script>
 

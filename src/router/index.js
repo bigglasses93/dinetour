@@ -4,13 +4,14 @@ import Home from "@/views/Home";
 import Users from "@/views/Users";
 import User from "@/views/User";
 import Layout from "@/views/Layout";
-import Teams from "@/views/Teams";
-import Team from "@/views/Team";
+import Events from "@/views/Events";
+import Event from "@/views/Event";
 import SignUp from "@/views/SignUp";
 import SignIn from "@/views/SignIn";
 import Todo from "@/views/Todo";
+import Homepage from "@/views/Homepage";
 import CreateEvent from "@/views/CreateEvent";
-
+import ApplyEvent from "@/views/ApplyEvent";
 
 Vue.use(Router);
 
@@ -39,14 +40,14 @@ const router = new Router({
           props: true
         },
         {
-          path: "/teams",
-          name: "teams",
-          component: Teams
+          path: "/events",
+          name: "events",
+          component: Events
         },
         {
-          path: "/teams/:teamId",
-          name: "team",
-          component: Team,
+          path: "/events/:eventId",
+          name: "event",
+          component: Event,
           props: true
         },
         {
@@ -68,6 +69,16 @@ const router = new Router({
           path: "/create-event",
           name: "create-event",
           component: CreateEvent
+        },
+        {
+          path: "/homepage",
+          name: "homepage",
+          component: Homepage
+        },
+        {
+          path: "/apply-event",
+          name: "apply-event",
+          component: ApplyEvent
         }
       ]
     }
