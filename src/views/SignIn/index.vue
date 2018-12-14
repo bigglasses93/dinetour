@@ -5,7 +5,9 @@
           
           <v-layout row>
             <v-flex xs12>
-              <h3>SignIn</h3>
+              <v-toolbar dark>
+                <v-toolbar-title>Log In</v-toolbar-title>
+              </v-toolbar>
               <v-text-field v-model="email" placeholder="email">
               </v-text-field>
               <v-text-field type="password" v-model="password" placeholder="password">
