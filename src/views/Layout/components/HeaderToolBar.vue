@@ -13,43 +13,38 @@
             <v-list-tile-action>
               <v-icon>home</v-icon>
             </v-list-tile-action>
-            トップ
+            Home
           </v-list-tile>
           <v-list-tile to="/users">
             <v-list-tile-action>
               <v-icon>person</v-icon>
             </v-list-tile-action>
-            ユーザー一覧
+            Hosts
           </v-list-tile>
-          <v-list-tile to="/teams">
-            <v-list-tile-action>
-              <v-icon>people</v-icon>
-            </v-list-tile-action>
-            チーム一覧
-          </v-list-tile>
+          
           <v-list-tile to="/signup">
             <v-list-tile-action>
               <v-icon>add</v-icon>
             </v-list-tile-action>
-            サインアップ
+            Singup
           </v-list-tile>
           <v-list-tile to="/signin">
             <v-list-tile-action>
               <v-icon>input</v-icon>
             </v-list-tile-action>
-            サインイン
+            Singin
           </v-list-tile>
           <v-list-tile v-on:click="signout">
             <v-list-tile-action>
               <v-icon>clear</v-icon>
             </v-list-tile-action>
-            サインアウト
+            Signout
           </v-list-tile>
           <v-list-tile to="/todo">
             <v-list-tile-action>
               <v-icon>list</v-icon>
             </v-list-tile-action>
-            TODO
+            Todo
           </v-list-tile>
         </v-list-tile-content>
       </v-list>
