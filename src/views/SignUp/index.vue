@@ -1,11 +1,11 @@
 <template>
   <div>
       <v-content>
-        <v-container grid-list-xl text-xs-center>
-          <v-layout column>
+        <v-container grid-list-xs text-xs-center>
+          <v-layout column justify-center>
             <v-flex xs10 offset-xs1>
               <v-card dark color="black">
-                <v-card-text><h1>Create your own account</h1></v-card-text>
+                <v-card-text><h2>Create your own account</h2></v-card-text>
               </v-card>
             </v-flex>
 
@@ -45,7 +45,6 @@
               <v-flex xs10 offset-xs1>
               <v-btn v-on:click="signUp">Sign Up</v-btn>
               </v-flex> 
-            </v-flex>
           </v-layout>
         </v-container>
       </v-content>
@@ -69,7 +68,7 @@ export default {
           );
         },
         email: value => {
-          const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,1}\.[0-9]{1,1}\.[0-9]{1,1}\.[0-9]{1,1}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{1,}))$/
           return pattern.test(value) || "Invalid e-mail."
         }
       }

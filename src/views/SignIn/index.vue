@@ -1,13 +1,13 @@
 <template>
   <div>
       <v-content>
-        <v-container>
+        <v-container grid-list-xs text-xs-center>
           
-          <v-layout row>
-            <v-flex xs12>
-              <v-toolbar dark>
-                <v-toolbar-title>Log In</v-toolbar-title>
-              </v-toolbar>
+          <v-layout column>
+            <v-flex  xs10 offset-xs1>
+              <v-card dark color="black">
+                <v-card-text><h2>Sign In</h2></v-card-text>
+              </v-card>
               <v-text-field v-model="email" placeholder="email">
               </v-text-field>
               <v-text-field type="password" v-model="password" placeholder="password">
