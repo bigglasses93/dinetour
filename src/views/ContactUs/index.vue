@@ -48,34 +48,32 @@
 
 
 <script>
-  import axios from 'axios'
+import axios from 'axios'
 
-  export default {
-    data: () => ({
-      email: '',
-      emailRules: [
-        v => !!v || 'E-mail is required',
-        v => /.+@.+/.test(v) || 'E-mail must be valid'
-      ],
-    }),
+export default {
+  data: () => ({
+    email: "",
+    emailRules: [
+      v => !!v || "E-mail is required",
+      v => /.+@.+/.test(v) || "E-mail must be valid"
+    ],
+  }),
 
-    methods: {
-      submit () {
-        if (this.$refs.form.validate()) {
-          // Native form submission is not yet supported
-          axios.post('/api/submit', {
-            name: this.name,
-            email: this.email,
-            select: this.select,
-            checkbox: this.checkbox  
-          })
-        }
-      },
-      submit () {
-        this.$refs.form.reset()
+  methods: {
+    submit() {
+      if (this.$refs.form.validate()) {
+        // Native form submission is not yet supported
+        axios.post("/api/submit", {
+          name: this.name,
+          email: this.email,
+          select: this.select,
+          checkbox: this.checkbox  
+        })
       }
+      this.$refs.form.reset();
     }
   }
+};
 </script>
 
 

@@ -9,42 +9,37 @@
               </v-card>
             </v-flex>
 
-              <!--
-              <v-text-field v-model="name" label="name">
-              </v-text-field>
-              -->
-
-              <v-flex xs10 offset-xs1>
+            <v-flex xs10 offset-xs1>
                 <v-text-field
                   v-model="email"
                   :rules="[rules.required, rules.email]"
                   label="E-mail"
                 ></v-text-field>
-              </v-flex>
+            </v-flex>
 
-              <v-flex xs10 offset-xs1>
+            <v-flex xs10 offset-xs1>
               <v-text-field type="password" v-model="password" label="Password">
               </v-text-field>
-              </v-flex>
+            </v-flex>
 
-              <v-flex xs10 offset-xs1>
+            <v-flex xs10 offset-xs1>
               <v-text-field type="password" v-model="confirm_password"
                 label="Confirm Password"
                 :rules="[rules.passwordMatch]">
               </v-text-field>
-              </v-flex>
+            </v-flex>
 
-              <v-flex xs10 offset-xs1>
+            <v-flex xs10 offset-xs1>
               <v-checkbox
                 v-model="agree"
                 label="I agree with the terms and conditions."
               ></v-checkbox>
-              </v-flex>             
+            </v-flex>             
 
 
-              <v-flex xs10 offset-xs1>
+            <v-flex xs10 offset-xs1>
               <v-btn v-on:click="signUp">Sign Up</v-btn>
-              </v-flex> 
+            </v-flex>
           </v-layout>
         </v-container>
       </v-content>
@@ -68,8 +63,8 @@ export default {
           );
         },
         email: value => {
-          const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,1}\.[0-9]{1,1}\.[0-9]{1,1}\.[0-9]{1,1}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{1,}))$/
-          return pattern.test(value) || "Invalid e-mail."
+          const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          return pattern.test(value) || "Invalid e-mail.";
         }
       }
     };

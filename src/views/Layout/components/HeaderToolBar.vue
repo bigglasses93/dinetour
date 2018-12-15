@@ -29,30 +29,12 @@
             Events
           </v-list-tile>
           
-          <v-list-tile to="/signup" v-if="!loggedIn">
-            <v-list-tile-action>
-              <v-icon>add</v-icon>
-            </v-list-tile-action>
-            Sign Up
-          </v-list-tile>
-          <v-list-tile to="/signin" v-if="!loggedIn">
-            <v-list-tile-action>
-              <v-icon>input</v-icon>
-            </v-list-tile-action>
-            Sign In
-          </v-list-tile>
-          <v-list-tile v-on:click="signout" v-if="loggedIn">
-            <v-list-tile-action>
-              <v-icon>clear</v-icon>
-            </v-list-tile-action>
-            Log Out
-          </v-list-tile>
-          <v-list-tile to="/todo">
+          <!--<v-list-tile to="/todo">
             <v-list-tile-action>
               <v-icon>list</v-icon>
             </v-list-tile-action>
             Todo
-          </v-list-tile>
+          </v-list-tile>-->
         </v-list-tile-content>
       </v-list>
     </v-navigation-drawer>
@@ -115,17 +97,22 @@
 
 <script>
 import firebase from "firebase";
+import { mapGetters } from "vuex";
 
 export default {
   name: "HeaderToolBar",
   data: () => ({
+    drawer: false,
     date: new Date().toISOString().substr(0, 10),
-      menu: false,
-      drawer: false
-
+    menu: false
   }),
   props: {
     source: String
+  },
+  computed: {
+    ...mapGetters({
+      loggedIn: "shared/LOGGEDIN"
+    })
   },
   methods: {
     signout: function() {
