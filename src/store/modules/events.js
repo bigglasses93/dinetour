@@ -26,7 +26,7 @@ const events = {
   },
   mutations: {
     RECEIVE_EVENTS(state, events) {
-      users.forEach(event => {
+      events.forEach(event => {
         if (event) {
           Vue.set(state.events, event.id, event);
         }
