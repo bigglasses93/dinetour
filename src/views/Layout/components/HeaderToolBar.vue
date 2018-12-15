@@ -39,7 +39,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar
-      color="balck"
+      color="black"
       dense
       fixed
       clipped-left
@@ -49,7 +49,7 @@
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title class="mr-5 align-center white--text">
         <router-link to="/">
-          <v-img contain height="25" width="100" class="title"
+          <v-img contain width="120" class="title"
             :src="require(`../../../../public/logo-white.png`)"
           ></v-img>
         </router-link>
