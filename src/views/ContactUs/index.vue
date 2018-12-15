@@ -18,7 +18,6 @@
               ]"
               v-model="address"
               label="Email Address"
-              placeholder="Snowy Rock Pl"
               counter="25"
               required
               ></v-text-field>
