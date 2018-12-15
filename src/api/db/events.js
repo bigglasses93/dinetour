@@ -1,9 +1,9 @@
 export default [
   {
     id: 1,
-    name: "Danko Challenge",
+    name: "Children's Snack Meetup",
     image:
-      "https://i.pinimg.com/564x/2d/b2/e6/2db2e61f7d7d8837b5a0a2d6085befed.jpg",
+      "https://cdn.closeronline.co.uk/one/lifestyle-images/family_money/58a339de6f082ca4501f0525/childrens-birthday-party-1.jpg?quality=50&format=jpg",
     datetime: "2018-01-11 18:00"
   },
   {
@@ -22,7 +22,7 @@ export default [
   },
   {
     id: 4,
-    name: "Impressive Beef Rice",
+    name: "Impressive Gyudon",
     image:
       "https://i.pinimg.com/564x/55/85/ce/5585cecd1f1643ba6610437690b7756d.jpg",
     datetime: "2019-01-30 18:00"

@@ -5,11 +5,12 @@
         <v-layout column justify-center>
 
       <v-carousel>
+        <router-link v-for="item in events" :key="item.id" :to="`/events/${item.id}`">
         <v-carousel-item
-          v-for="(item,i) in items"
-          :key="i"
-          :src="item.src"
+          :src="item.image"
+          :v-text="item.name"
         ></v-carousel-item>
+        </router-link>
       </v-carousel>
 
       <div class="text-xs-center">
@@ -35,6 +36,8 @@
 
 
 <script>
+import { mapGetters, mapActions } from "vuex";
+
 export default {
   data() {
     return {
@@ -56,6 +59,20 @@ export default {
         }
       ]
     };
+  },
+  computed: {
+    ...mapGetters({
+      events: "events/ALL_EVENTS"
+    })
+  },
+  created() {
+    // console.log("ok");
+    this.fetchEvents();
+  },
+  methods: {
+    ...mapActions({
+      fetchEvents: "events/FETCH_EVENTS"
+    })
   }
 };
 </script>
