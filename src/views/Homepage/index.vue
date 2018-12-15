@@ -35,26 +35,29 @@
 
 
 <script>
-  export default {
-    data () {
-      return {
-        items: [
-          {
-            src: "assets/party1.jpg"
-          },
-          {
-            src: "https://www.sushicounter.com/files/58ed18a0127b9.image%20(5).jpg"
-          },
-          {
-            src: "https://cdn.closeronline.co.uk/one/lifestyle-images/family_money/58a339de6f082ca4501f0525/childrens-birthday-party-1.jpg?quality=50&format=jpg"
-          },
-          {
-            src: "https://files.tofugu.com/articles/japan/2015-02-19-nabe-hot-pot/nabe-making-party-at-table.jpg"
-          }
-        ]
-      }
-    }
+export default {
+  data() {
+    return {
+      items: [
+        {
+          src: "assets/party1.jpg"
+        },
+        {
+          src:
+            "https://www.sushicounter.com/files/58ed18a0127b9.image%20(5).jpg"
+        },
+        {
+          src:
+            "https://cdn.closeronline.co.uk/one/lifestyle-images/family_money/58a339de6f082ca4501f0525/childrens-birthday-party-1.jpg?quality=50&format=jpg"
+        },
+        {
+          src:
+            "https://files.tofugu.com/articles/japan/2015-02-19-nabe-hot-pot/nabe-making-party-at-table.jpg"
+        }
+      ]
+    };
   }
+};
 </script>
 
 
