@@ -32,15 +32,15 @@
         <v-container grid-list-sm fluid>
           <v-layout row wrap>
             <v-flex
-              v-for="n in 9"
-              :key="n"
+              v-for="event in 9"
+              :key="event.id"
               xs4
               d-flex
-            >
+            >          
               <v-card flat tile class="d-flex">
                 <v-img
-                  :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
-                  :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
+                  :src="events"
+                  :lazy-src="events"
                   aspect-ratio="1"
                   class="grey lighten-2"
                 >
@@ -75,27 +75,6 @@
 import { mapGetters, mapActions } from "vuex";
 
 export default {
-  data() {
-    return {
-      items: [
-        {
-          src: "assets/party1.jpg"
-        },
-        {
-          src:
-            "https://www.sushicounter.com/files/58ed18a0127b9.image%20(5).jpg"
-        },
-        {
-          src:
-            "https://cdn.closeronline.co.uk/one/lifestyle-images/family_money/58a339de6f082ca4501f0525/childrens-birthday-party-1.jpg?quality=50&format=jpg"
-        },
-        {
-          src:
-            "https://files.tofugu.com/articles/japan/2015-02-19-nabe-hot-pot/nabe-making-party-at-table.jpg"
-        }
-      ]
-    };
-  },
   computed: {
     ...mapGetters({
       events: "events/ALL_EVENTS"
