@@ -33,11 +33,11 @@
 
           <v-list-tile>
             <v-list-tile-action>
-              <v-icon color="indigo">people</v-icon>
+              <v-icon color="indigo">language</v-icon>
             </v-list-tile-action>
 
             <v-list-tile-content>
-              <v-list-tile-title v-if="currentUser.team">{{ currentUser.team.name }}</v-list-tile-title>
+              <v-list-tile-title v-if="currentUser.language">{{ currentUser.language }}</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
         </v-list>
