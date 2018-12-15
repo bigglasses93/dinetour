@@ -26,9 +26,8 @@
             <v-img
             height="20%"
             width="20%"
-            :src="'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/220px-QR_code_for_mobile_English_Wikipedia.svg.png'"
-            :lazy-src="'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/220px-QR_code_for_mobile_English_Wikipedia.svg.png'"
-
+            :src="qr_url"
+            v-if="qr_url"
             ></v-img>
         </v-flex>      
       </v-container>
@@ -48,13 +47,29 @@ export default {
     emailRules: [
       v => !!v || "E-mail is required",
       v => /.+@.+/.test(v) || "E-mail must be valid"
-    ]
+    ],
+    qr_url: ""
   }),
   mounted: function() {
+    // Auto fill user's email
     var user = firebase.auth().currentUser;
     if (user && user.email) {
       this.email = user.email;
     }
+
+    // Get the QR code from the database
+    var storage = firebase.storage();
+    var this_ref = this;
+    storage
+      .ref("shared/qr-code.gif")
+      .getDownloadURL()
+      .then(function(url) {
+        // console.log("URL fetched: ", url);
+        this_ref.qr_url = url;
+      })
+      .catch(function(err) {
+        alert(err);
+      });
   },
   methods: {
     submit() {
