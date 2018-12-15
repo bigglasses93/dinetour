@@ -26,6 +26,7 @@ export default {
     })
   },
   created() {
+    console.log("ok");
     this.fetchEvents();
   },
   methods: {

@@ -29,6 +29,7 @@
 <script>
 import firebase from "firebase";
 export default {
+<<<<<<< HEAD
   name: "SignIn",
   data() {
     return {
@@ -36,6 +37,16 @@ export default {
       password: null,
       remember_me: false
     };
+=======
+  
+  name: "SignIn",
+  data() {
+      return {
+        email: null,
+        password: null,
+        checkbox: true
+      }
+>>>>>>> anh
   },
   methods: {
     signin: function() {

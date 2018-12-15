@@ -42,7 +42,7 @@
 <script>
 import { mapGetters, mapActions } from "vuex";
 export default {
-  name: "Event",
+  name: "EventDetail",
   props: {
     eventId: {
       required: true,
@@ -51,7 +51,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      user: "events/EVENTS"
+      event: "events/EVENT"
     }),
     currentEvent() {
       return this.event(this.eventId);

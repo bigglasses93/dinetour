@@ -9,7 +9,7 @@
           v-for="event in events"
           :key="event.id"
         >
-          <user-list-element :event="event"></user-list-element>
+          <event-list-element :event="event"></event-list-element>
         </v-flex>
       </v-layout>
     </v-container>

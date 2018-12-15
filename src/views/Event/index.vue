@@ -3,7 +3,7 @@
     <v-content>
       <v-container fill-height>
         <v-layout justify-center align-center>
-          <user-profile :eventId="eventId"></user-profile>
+          <event-detail :eventId="eventId"></event-detail>
         </v-layout>
       </v-container>
     </v-content>
@@ -12,13 +12,13 @@
 
 <script>
 // @ is an alias to /src
-import Event from "./components/Event.vue";
+import EventDetail from "./components/EventDetail.vue";
 
 export default {
   name: "Event",
   props: ["eventId"],
   components: {
-    Event
+    EventDetail
   }
 };
 </script>
