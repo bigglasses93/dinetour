@@ -29,12 +29,12 @@
             Events
           </v-list-tile>
           
-          <v-list-tile to="/todo">
+          <!--<v-list-tile to="/todo">
             <v-list-tile-action>
               <v-icon>list</v-icon>
             </v-list-tile-action>
             Todo
-          </v-list-tile>
+          </v-list-tile>-->
         </v-list-tile-content>
       </v-list>
     </v-navigation-drawer>
