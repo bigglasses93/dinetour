@@ -29,23 +29,23 @@
             Events
           </v-list-tile>
           
-          <v-list-tile to="/signup">
+          <v-list-tile to="/signup" v-if="!loggedIn">
             <v-list-tile-action>
               <v-icon>add</v-icon>
             </v-list-tile-action>
-            Singup
+            Sign Up
           </v-list-tile>
-          <v-list-tile to="/signin">
+          <v-list-tile to="/signin" v-if="!loggedIn">
             <v-list-tile-action>
               <v-icon>input</v-icon>
             </v-list-tile-action>
-            Singin
+            Sign In
           </v-list-tile>
-          <v-list-tile v-on:click="signout">
+          <v-list-tile v-on:click="signout" v-if="loggedIn">
             <v-list-tile-action>
               <v-icon>clear</v-icon>
             </v-list-tile-action>
-            Signout
+            Log Out
           </v-list-tile>
           <v-list-tile to="/todo">
             <v-list-tile-action>
@@ -61,7 +61,7 @@
       dense
       fixed
       clipped-left
-      dark
+      dark=""
       app 
     > 
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
@@ -102,10 +102,11 @@
       <v-layout row align-center style="max-width: 650px">
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
-          <v-btn flat>About</v-btn>
+          <v-btn flat to="/Homepage">Homepage</v-btn>
           <v-btn flat to="/Contactus">Contactus</v-btn>
-          <v-btn flat to="/signin">Login</v-btn>
-          <v-btn flat to="/signup">Signup</v-btn>
+          <v-btn flat to="/signin" v-if="!loggedIn">Log In</v-btn>
+          <v-btn flat to="/signup" v-if="!loggedIn">Sign Up</v-btn>
+          <v-btn flat v-on:click="signout" v-if="loggedIn">Log Out</v-btn>
         </v-toolbar-items>
       </v-layout>
     </v-toolbar>
@@ -113,18 +114,32 @@
 </template>
 
 <script>
+import firebase from "firebase";
+
 export default {
   name: "HeaderToolBar",
   data: () => ({
     date: new Date().toISOString().substr(0, 10),
       menu: false,
-    drawer: false
+      drawer: false,
+      
+      
   }),
   props: {
     source: String
   },
   methods: {
-    signout: function(){
+    signout: function() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          alert("Successfully logged out.");
+          this.$router.push("/");
+        })
+        .catch(err => {
+          alert(err);
+        });
     }
   }
 };
