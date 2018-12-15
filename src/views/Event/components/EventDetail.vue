@@ -5,22 +5,19 @@
           fluid
           grid-list-md          
         >
+        <v-img          
+          :src="currentEvent.image"   
+          max-height="300"
+        >             
 
-         <v-layout> 
-                <v-list two-line>
-                <v-list-tile>
-                  <v-list-tile-action>
-                    <v-icon color="indigo">datetime</v-icon>
-                  </v-list-tile-action>
-
-                  <v-list-tile-content>
+        </v-img>
+        <v-card class="black--text pl-5 pt-5 display-1 pl-5 pt-5">{{ currentEvent.name }}</v-card>
+                  
+          <!-- <v-card-title class="display-1 pl-5 pt-5" align-center></v-card-title> -->
+          <v-card-title align-center>
                     <v-list-tile-title>{{ currentEvent.datetime }}</v-list-tile-title>
-                  </v-list-tile-content>
-                </v-list-tile>
-
-                <v-divider inset></v-divider>
-                </v-list>
-         </v-layout>
+          </v-card-title>
+        <!-- </v-card> -->
 
         <v-layout>
            <v-card>
