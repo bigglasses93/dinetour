@@ -1,37 +1,50 @@
 <template>
   <div>
       <v-content>
-        <v-container>
-          <v-layout row>
-            <v-flex xs12>
-              <v-toolbar dark>
-                <v-toolbar-title>Sign Up</v-toolbar-title>
-              </v-toolbar>
+        <v-container grid-list-xl text-xs-center>
+          <v-layout column>
+            <v-flex xs10 offset-xs1>
+              <v-card dark color="black">
+                <v-card-text><h1>Create your own account</h1></v-card-text>
+              </v-card>
+            </v-flex>
 
               <!--
               <v-text-field v-model="name" label="name">
               </v-text-field>
               -->
 
-              <v-text-field v-model="email" label="Email" :rules="[rules.email]">
-              </v-text-field>
+              <v-flex xs10 offset-xs1>
+                <v-text-field
+                  v-model="email"
+                  :rules="[rules.required, rules.email]"
+                  label="E-mail"
+                ></v-text-field>
+              </v-flex>
 
-
+              <v-flex xs10 offset-xs1>
               <v-text-field type="password" v-model="password" label="Password">
               </v-text-field>
+              </v-flex>
 
+              <v-flex xs10 offset-xs1>
               <v-text-field type="password" v-model="confirm_password"
                 label="Confirm Password"
                 :rules="[rules.passwordMatch]">
               </v-text-field>
+              </v-flex>
 
-
+              <v-flex xs10 offset-xs1>
               <v-checkbox
                 v-model="agree"
                 label="I agree with the terms and conditions."
-              ></v-checkbox>               
+              ></v-checkbox>
+              </v-flex>             
 
-              <v-btn v-on:click="signUp">Sign Up</v-btn> 
+
+              <v-flex xs10 offset-xs1>
+              <v-btn v-on:click="signUp">Sign Up</v-btn>
+              </v-flex> 
             </v-flex>
           </v-layout>
         </v-container>
