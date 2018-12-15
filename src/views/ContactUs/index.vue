@@ -4,7 +4,8 @@
       <v-container justify-center>
         <v-flex>
             <v-text-field
-              label="Enter your question"
+              v-model="message"
+              label="Enter Your Message"
               placeholder=""
               outline
               height="200"
@@ -14,11 +15,11 @@
               v-model="email"
               :rules="emailRules"
               label="Email"
-              placeholder="Input your email address"
+              placeholder="Input Your Email Address"
               counter="25"
               required
               ></v-text-field>
-             <v-btn> submit </v-btn>
+             <v-btn @click="submit" color="primary">Submit</v-btn>
         </v-flex>                   
 
         <v-flex justify-center>
@@ -37,29 +38,33 @@
 
 
 <script>
-import axios from 'axios'
+// import axios from "axios";
+import firebase from "firebase";
 
 export default {
   data: () => ({
     email: "",
+    message: "",
     emailRules: [
       v => !!v || "E-mail is required",
       v => /.+@.+/.test(v) || "E-mail must be valid"
-    ],
+    ]
   }),
 
   methods: {
     submit() {
-      if (this.$refs.form.validate()) {
-        // Native form submission is not yet supported
-        axios.post("/api/submit", {
-          name: this.name,
+      var database = firebase.database();
+      if (database) {
+        var formData = {
           email: this.email,
-          select: this.select,
-          checkbox: this.checkbox  
-        })
+          message: this.message,
+          responded: false,
+          response: ""
+        };
+        database.ref("feedbacks").push(formData);
+        alert("Your message has been delivered to the developers.");
+        this.$router.push("/");
       }
-      this.$refs.form.reset();
     }
   }
 };
