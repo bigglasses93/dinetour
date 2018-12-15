@@ -1,6 +1,6 @@
 <template>
   <v-content>
-    <v-form>
+    <v-form ref="form" v-model="valid" lazy-validation>
       <v-container>
         <v-layout column fixed justify-center>
           <v-flex xs12 sm6 md3>
@@ -9,30 +9,34 @@
               placeholder=""
               outline
               height="200"
+              required
             ></v-text-field>
             <v-text-field
-              ref="address"
-              :rules="[
-              () => !!address || 'This field is required',,
-              addressCheck
-              ]"
-              v-model="address"
-              label="Email Address"
+              v-model="email"
+              :rules="emailRules"
+              label="Email"
+              placeholder="Input your email address"
               counter="25"
               required
               ></v-text-field>
-             <v-btn> submit </v-btn>
-          </v-flex>                   
 
-          
+              <v-btn
+                :disabled="!valid"
+                @click="submit"
+              >submit
+              </v-btn>
+
+          </v-flex>                   
+    
           <v-spacer></v-spacer>
           <v-img
-            height="125"
-            width="125"
+            align-center
+            max-height="125"
+            max-width="125"
             :src="'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/220px-QR_code_for_mobile_English_Wikipedia.svg.png'"
             :lazy-src="'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/220px-QR_code_for_mobile_English_Wikipedia.svg.png'"
-                    align-center
-                    justify-center
+            
+            justify-center
 
           ></v-img>
 
@@ -44,6 +48,32 @@
 
 
 <script>
+import axios from 'axios'
+
+export default {
+  data: () => ({
+    email: "",
+    emailRules: [
+      v => !!v || "E-mail is required",
+      v => /.+@.+/.test(v) || "E-mail must be valid"
+    ],
+  }),
+
+  methods: {
+    submit() {
+      if (this.$refs.form.validate()) {
+        // Native form submission is not yet supported
+        axios.post("/api/submit", {
+          name: this.name,
+          email: this.email,
+          select: this.select,
+          checkbox: this.checkbox  
+        })
+      }
+      this.$refs.form.reset();
+    }
+  }
+};
 </script>
 
 

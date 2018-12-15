@@ -39,7 +39,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar
-      color="black"
+      color="balck"
       dense
       fixed
       clipped-left
@@ -50,6 +50,36 @@
       <v-toolbar-title class="mr-5 align-center white--text">
         <span class="title">DineTour</span>
       </v-toolbar-title>
+
+      <v-flex xs12 sm6 md4>
+        <v-menu
+          ref="menu"
+          :close-on-content-click="false"
+          v-model="menu"
+          :nudge-right="40"
+          :return-value.sync="date"
+          lazy
+          transition="scale-transition"
+          offset-y
+          full-width
+          min-width="290px"
+        >
+          <v-text-field
+            slot="activator"
+            v-model="date"
+            
+            prepend-icon="event"
+            readonly
+          ></v-text-field>
+          <v-date-picker v-model="date" no-title scrollable>
+            <v-spacer></v-spacer>
+            <v-btn flat color="primary" @click="menu = false">Cancel</v-btn>
+            <v-btn flat color="primary" @click="$refs.menu.save(date)">OK</v-btn>
+          </v-date-picker>
+        </v-menu>
+      </v-flex>
+
+
       <v-spacer></v-spacer>
       <v-layout row align-center style="max-width: 650px">
         <v-spacer></v-spacer>
@@ -72,7 +102,9 @@ import { mapGetters } from "vuex";
 export default {
   name: "HeaderToolBar",
   data: () => ({
-    drawer: false
+    drawer: false,
+    date: new Date().toISOString().substr(0, 10),
+    menu: false
   }),
   props: {
     source: String

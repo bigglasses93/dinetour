@@ -4,9 +4,6 @@
     width="200px"
     :to="`/events/${event.id}`"
   >
-    <v-img
-        src="https://i.pinimg.com/564x/2d/b2/e6/2db2e61f7d7d8837b5a0a2d6085befed.jpg"
-    ></v-img>
 
     <v-card-actions>
       <v-icon>event</v-icon>

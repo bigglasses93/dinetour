@@ -11,7 +11,7 @@ const events = {
       const response = api.fetchEvents();
       commit("RECEIVE_EVENTS", response);
     },
-    FETCH_EVENTS({ commit }, uid) {
+    FETCH_EVENT({ commit }, uid) {
       const response = api.fetchEvent(uid);
       commit("RECEIVE_EVENT", response);
     }
@@ -26,7 +26,7 @@ const events = {
   },
   mutations: {
     RECEIVE_EVENTS(state, events) {
-      users.forEach(event => {
+      events.forEach(event => {
         if (event) {
           Vue.set(state.events, event.id, event);
         }
