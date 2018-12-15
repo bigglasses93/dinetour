@@ -11,7 +11,7 @@ const events = {
       const response = api.fetchEvents();
       commit("RECEIVE_EVENTS", response);
     },
-    FETCH_EVENTS({ commit }, uid) {
+    FETCH_EVENT({ commit }, uid) {
       const response = api.fetchEvent(uid);
       commit("RECEIVE_EVENT", response);
     }

@@ -27,24 +27,13 @@
 <script>
 import firebase from "firebase";
 export default {
-  name:"checkbox",
-  data () {
-      return {
-        checkbox: true
-      }
-    },
+  
   name: "SignIn",
   data() {
       return {
         email: null,
-        password: null
-      }
-  },
-  name: "Create Account",
-  data() {
-      return {
-        email: null,
-        password: null
+        password: null,
+        checkbox: true
       }
   },
   methods: {
