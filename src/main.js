@@ -24,10 +24,21 @@ Vue.filter("date", convertDateToString);
 
 Vue.config.productionTip = false;
 
+// Use a global variable to detect changes
+//window.g_loggedIn = false;
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    console.log("Logged in");
+    //console.log(user);
+    store.commit("shared/SET_LOGGEDIN", true);
+  } else {
+    console.log("Logged out");
+    store.commit("shared/SET_LOGGEDIN", false);
+  }
+});
+
 new Vue({
   router,
   store,
   render: h => h(App)
 }).$mount("#app");
-
-

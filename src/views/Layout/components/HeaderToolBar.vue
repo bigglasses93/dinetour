@@ -67,17 +67,20 @@
 
 <script>
 import firebase from "firebase";
+import { mapGetters } from "vuex";
 
 export default {
   name: "HeaderToolBar",
   data: () => ({
-    drawer: false,
-    loggedIn: () => {
-      return firebase.auth().currentUser;
-    }
+    drawer: false
   }),
   props: {
     source: String
+  },
+  computed: {
+    ...mapGetters({
+      loggedIn: "shared/LOGGEDIN"
+    })
   },
   methods: {
     signout: function() {
