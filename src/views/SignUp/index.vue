@@ -1,15 +1,14 @@
 <template>
   <div>
       <v-content>
-        <v-container grid-list-xs text-xs-center>
-          <v-layout column justify-center>
-            <v-flex xs10 offset-xs1>
+        <v-container fill-height>
+          <v-layout justify-center align-center>
+            <v-flex xs12 sm8 md4>
               <v-card dark color="black">
                 <v-card-text><h2>Create your own account</h2></v-card-text>
               </v-card>
-            </v-flex>
 
-            <v-flex xs10 offset-xs1>
+            <v-flex>
                 <v-text-field
                   v-model="email"
                   :rules="[rules.required, rules.email]"
@@ -17,29 +16,29 @@
                 ></v-text-field>
             </v-flex>
 
-            <v-flex xs10 offset-xs1>
+            <v-flex>
               <v-text-field type="password" v-model="password" label="Password">
               </v-text-field>
             </v-flex>
 
-            <v-flex xs10 offset-xs1>
+            <v-flex>
               <v-text-field type="password" v-model="confirm_password"
                 label="Confirm Password"
                 :rules="[rules.passwordMatch]">
               </v-text-field>
             </v-flex>
 
-            <v-flex xs10 offset-xs1>
+            <v-flex>
               <v-checkbox
                 v-model="agree"
                 label="I agree with the terms and conditions."
               ></v-checkbox>
             </v-flex>             
 
-
-            <v-flex xs10 offset-xs1>
+            <v-flex>
               <v-btn v-on:click="signUp">Sign Up</v-btn>
             </v-flex>
+           </v-flex>
           </v-layout>
         </v-container>
       </v-content>
