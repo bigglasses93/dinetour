@@ -13,7 +13,7 @@
       </v-carousel>
 
       <div class="text-xs-center">
-        <v-menu transition="Sign-in">
+        <!--<v-menu transition="Sign-in">
           <v-btn slot="activator" dark color="primary" to="/signin">Log in</v-btn>
         </v-menu>
         <v-menu transition="Sign-out">
@@ -22,7 +22,9 @@
         </v-menu>
         <v-menu transition="Sign-out">
           <v-btn slot="activator" dark color="secondary" flat to="/signup">Sign up</v-btn>
-        </v-menu>
+        </v-menu>-->
+
+        <v-btn flat color="secondary" to="/events">See More...</v-btn>
       </div>
 
         </v-layout>
