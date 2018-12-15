@@ -77,7 +77,7 @@ export default {
           .then(user => {
             alert("Create account: ", this.email);
             console.log(user);
-            this.$router.push("/signin");
+            this.$router.push("/");
           })
           .catch(error => {
             alert(error.message);
