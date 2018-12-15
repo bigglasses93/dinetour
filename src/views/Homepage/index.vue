@@ -14,6 +14,10 @@
 
       <div class="text-xs-center">
         <v-menu transition="Sign-in">
+          <v-btn slot="activator" dark color="primary" to="/signin">Log in</v-btn>
+        </v-menu>
+        <v-menu transition="Sign-out">
+          <v-btn slot="activator" dark color="secondary" to="/signup">Sign up</v-btn>
           <v-btn slot="activator" dark color="primary" flat to="/signin">Sign in</v-btn>
         </v-menu>
         <v-menu transition="Sign-out">

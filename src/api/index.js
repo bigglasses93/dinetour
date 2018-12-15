@@ -1,5 +1,5 @@
 import users from "./db/users";
-import teams from "./db/teams";
+//import teams from "./db/teams";
 import events from "./db/events";
 
 export default {
