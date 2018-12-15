@@ -1,5 +1,5 @@
 <template>
-  <v-layout width="900" justify-center v-if="currentEvent">
+  <v-layout justify-center v-if="currentEvent">
    <v-flex xs12 sm6>
     <v-container
           fluid
@@ -8,29 +8,35 @@
         <v-img          
           :src="currentEvent.image"   
           max-height="300"
-        >             
-
+        >           
         </v-img>
-        <v-card class="black--text pl-5 pt-5 display-1 pl-5 pt-5">{{ currentEvent.name }}</v-card>
-                  
+        <v-card>
+          <v-card-text class="black--text display-1 pt-3">
+            {{ currentEvent.name }}
+          </v-card-text>                  
           <!-- <v-card-title class="display-1 pl-5 pt-5" align-center></v-card-title> -->
-          <v-card-title align-center>
-                    <v-list-tile-title>{{ currentEvent.datetime }}</v-list-tile-title>
-          </v-card-title>
-        <!-- </v-card> -->
+         <v-card-text >
+                    {{ currentEvent.datetime }}
+         </v-card-text>
+        </v-card>
 
-        <v-layout>
-           <v-card>
-            <v-card-text>
-            <p class="text-left">Event Description</p><br>
-            </v-card-text>
-            <span class="text-left">Come and join us with this great event!</span><br>
-            <span class="text-left">Register right now!</span>
+        <v-card-title></v-card-title>
+        <v-container
+          fluid
+          fill-height
+          pa-2       
+        >
+          <v-layout>             
+            <v-card width = "500" height = "200" class="black--text display-5 pt-2">Event Description</v-card>  
+            <v-spacer></v-spacer>
+            <!-- <v-card class="black--text display-1 pt-2">Register now!</v-card> -->
+            <v-btn large >Apply for it now</v-btn>
+            
 
-
-            <v-btn large color="red">Apply for it now</v-btn>
-           </v-card>
-        </v-layout>
+            
+          </v-layout>
+        </v-container>
+        
     </v-container>
    </v-flex>
   </v-layout>
