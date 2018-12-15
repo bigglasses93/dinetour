@@ -1,9 +1,8 @@
 <template>
   <v-content>
-    <v-form ref="form" v-model="valid" lazy-validation>
-      <v-container>
-        <v-layout column fixed justify-center>
-          <v-flex xs12 sm6 md3>
+    <v-form>
+      <v-container justify-center>
+        <v-flex>
             <v-text-field
               label="Enter your question"
               placeholder=""
@@ -19,28 +18,18 @@
               counter="25"
               required
               ></v-text-field>
+             <v-btn> submit </v-btn>
+        </v-flex>                   
 
-              <v-btn
-                :disabled="!valid"
-                @click="submit"
-              >submit
-              </v-btn>
-
-          </v-flex>                   
-    
-          <v-spacer></v-spacer>
-          <v-img
-            align-center
-            max-height="125"
-            max-width="125"
+        <v-flex justify-center>
+            <v-img
+            height="20%"
+            width="20%"
             :src="'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/220px-QR_code_for_mobile_English_Wikipedia.svg.png'"
             :lazy-src="'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/220px-QR_code_for_mobile_English_Wikipedia.svg.png'"
-            
-            justify-center
 
-          ></v-img>
-
-        </v-layout>
+            ></v-img>
+        </v-flex>      
       </v-container>
     </v-form>
   </v-content>
