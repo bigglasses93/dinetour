@@ -2,7 +2,7 @@
   <div>
       <v-content>
         <v-container grid-list-xs text-xs-center>
-          <v-layout column justify-center>
+          <v-layout column >
             <v-flex xs10 offset-xs1>
               <v-card dark color="black">
                 <v-card-text><h2>Create your own account</h2></v-card-text>

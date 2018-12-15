@@ -1,40 +1,41 @@
 <template>
-  <v-layout row v-if="currentEvent">
-    <v-flex xs12 sm6 offset-sm3>
-      <v-card>
-        <v-img
-            :src="currentEvent.image"
-            height="300px"
+  <v-layout width="900" justify-center v-if="currentEvent">
+   <v-flex xs12 sm6>
+    <v-container
+          fluid
+          grid-list-md          
         >
-          <v-layout
-              column
-              fill-height
-          >
-            <v-spacer></v-spacer>
 
-            <v-card-title class="white--text pl-5 pt-5">
-              <div class="display-1 pl-5 pt-5">{{ currentEvent.name }}</div>
-            </v-card-title>
-          </v-layout>
-        </v-img>
+         <v-layout> 
+                <v-list two-line>
+                <v-list-tile>
+                  <v-list-tile-action>
+                    <v-icon color="indigo">datetime</v-icon>
+                  </v-list-tile-action>
 
-        <v-list two-line>
-          <v-list-tile>
-            <v-list-tile-action>
-              <v-icon color="indigo">datetime</v-icon>
-            </v-list-tile-action>
+                  <v-list-tile-content>
+                    <v-list-tile-title>{{ currentEvent.datetime }}</v-list-tile-title>
+                  </v-list-tile-content>
+                </v-list-tile>
 
-            <v-list-tile-content>
-              <v-list-tile-title>{{ currentEvent.datetime }}</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
+                <v-divider inset></v-divider>
+                </v-list>
+         </v-layout>
 
-          <v-divider inset></v-divider>
+        <v-layout>
+           <v-card>
+            <v-card-text>
+            <p class="text-left">Event Description</p><br>
+            </v-card-text>
+            <span class="text-left">Come and join us with this great event!</span><br>
+            <span class="text-left">Register right now!</span>
 
-          
-        </v-list>
-      </v-card>
-    </v-flex>
+
+            <v-btn large color="red">Apply for it now</v-btn>
+           </v-card>
+        </v-layout>
+    </v-container>
+   </v-flex>
   </v-layout>
 </template>
 
@@ -49,6 +50,7 @@ export default {
       type: String
     }
   },
+
   computed: {
     ...mapGetters({
       event: "events/EVENT"
