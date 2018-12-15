@@ -22,13 +22,13 @@ const router = new Router({
       path: "/",
       name: "layout",
       component: Layout,
-      redirect: { name: "home" },
+      redirect: { name: "homepage" },
       children: [
-        {
-          path: "/home",
-          name: "home",
-          component: Home
-        },
+        // {
+        //   path: "/home",
+        //   name: "home",
+        //   component: Home
+        // },
         {
           path: "/users",
           name: "users",

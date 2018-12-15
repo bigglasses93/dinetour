@@ -1,7 +1,6 @@
 <template>
   <v-card
     hover
-    width="200px"
     :to="`/events/${event.id}`"
   >
 
