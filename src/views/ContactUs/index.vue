@@ -1,15 +1,8 @@
 <template>
   <v-content>
-<<<<<<< HEAD
     <v-form>
       <v-container justify-center>
         <v-flex>
-=======
-    <v-form ref="form" v-model="valid" lazy-validation>
-      <v-container>
-        <v-layout column fixed justify-center>
-          <v-flex xs12 sm6 md3>
->>>>>>> ed47346bb7a241a5f19166be117c9bf6dad505e9
             <v-text-field
               label="Enter your question"
               placeholder=""
@@ -25,7 +18,6 @@
               counter="25"
               required
               ></v-text-field>
-<<<<<<< HEAD
              <v-btn> submit </v-btn>
         </v-flex>                   
 
@@ -35,28 +27,8 @@
             width="20%"
             :src="'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/220px-QR_code_for_mobile_English_Wikipedia.svg.png'"
             :lazy-src="'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/220px-QR_code_for_mobile_English_Wikipedia.svg.png'"
-=======
 
-              <v-btn
-                :disabled="!valid"
-                @click="submit"
-              >submit
-              </v-btn>
-
-          </v-flex>                   
-    
-          <v-spacer></v-spacer>
-          <v-img
-            align-center
-            max-height="125"
-            max-width="125"
-            :src="'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/220px-QR_code_for_mobile_English_Wikipedia.svg.png'"
-            :lazy-src="'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/220px-QR_code_for_mobile_English_Wikipedia.svg.png'"
-            
-            justify-center
->>>>>>> ed47346bb7a241a5f19166be117c9bf6dad505e9
-
-          > </v-img>
+            ></v-img>
         </v-flex>      
       </v-container>
     </v-form>
