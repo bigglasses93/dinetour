@@ -38,16 +38,16 @@
       return {
         items: [
           {
-            src: 'https://www.google.com/url?sa=i&source=imgres&cd=&cad=rja&uact=8&ved=2ahUKEwidr9_49p7fAhXZzmEKHS_dAEMQjRx6BAgBEAU&url=https%3A%2F%2Fwww.123rf.com%2Fphoto_76860299_friends-dinner-table-top-view-people-eat-healthy-food-together-home-party.html&psig=AOvVaw2r6aIBITzWDoz-yyIHNBxU&ust=1544863444833661'
+            src: "assets/party1.jpg"
           },
           {
-            src: 'http://foodgawker.com/post/2014/11/16/407794/'
+            src: "https://www.sushicounter.com/files/58ed18a0127b9.image%20(5).jpg"
           },
           {
-            src: 'https://cdn.closeronline.co.uk/one/lifestyle-images/family_money/58a339de6f082ca4501f0525/childrens-birthday-party-1.jpg?quality=50&format=jpg'
+            src: "https://cdn.closeronline.co.uk/one/lifestyle-images/family_money/58a339de6f082ca4501f0525/childrens-birthday-party-1.jpg?quality=50&format=jpg"
           },
           {
-            src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA-aOPYTk02zci_Agzk56gxuR18mTmh1zfScYeC35wtso4BfFAdw'
+            src: "https://files.tofugu.com/articles/japan/2015-02-19-nabe-hot-pot/nabe-making-party-at-table.jpg"
           }
         ]
       }
