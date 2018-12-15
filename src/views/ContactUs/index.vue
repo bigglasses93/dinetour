@@ -50,7 +50,12 @@ export default {
       v => /.+@.+/.test(v) || "E-mail must be valid"
     ]
   }),
-
+  mounted: function() {
+    var user = firebase.auth().currentUser;
+    if (user && user.email) {
+      this.email = user.email;
+    }
+  },
   methods: {
     submit() {
       var database = firebase.database();
@@ -62,7 +67,7 @@ export default {
           response: ""
         };
         database.ref("feedbacks").push(formData);
-        alert("Your message has been delivered to the developers.");
+        alert("Your message has been delivered to the dumb developers.");
         this.$router.push("/");
       }
     }
