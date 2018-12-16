@@ -12,15 +12,15 @@
             <v-text-field
               label="Event Name"
               :value="currentEvent.name"
-              readonly="true"
+              readonly
             ></v-text-field>
           </v-flex>
 
           <v-flex xs12>
             <v-text-field
               label="Arriving Time"
-              :value="currentEvent.datetime"
-              readonly="true"
+              :value="currentEvent.date.toString() + ` ` + currentEvent.time.toString()"
+              readonly
             ></v-text-field>
           </v-flex>
 
@@ -44,8 +44,8 @@
           <v-flex xs12>
             <v-text-field
               label="Cancel before"
-              :value="currentEvent.datetime"
-              readonly="true"
+              :value="currentEvent.date.toString() + ` ` + currentEvent.time.toString()"
+              readonly
             ></v-text-field>
           </v-flex>
 
@@ -54,7 +54,7 @@
           ></v-checkbox>
 
           <v-flex xs12>
-            <v-btn color="primary">Apply for the Event</v-btn>
+            <v-btn color="primary" @click="submit">Apply for the Event</v-btn>
           </v-flex>
 
         </v-layout>
@@ -79,10 +79,10 @@ export default {
 
   computed: {
     ...mapGetters({
-      event: "events/EVENT"
+      events: "events/EVENT"
     }),
     currentEvent() {
-      return this.event(this.eventId);
+      return this.events(this.eventId);
     }
   },
   created() {
@@ -94,7 +94,10 @@ export default {
   methods: {
     ...mapActions({
       fetchEvent: "events/FETCH_EVENT"
-    })
+    }),
+    submit() {
+      this.$router.push("/events/" + this.eventId.toString());
+    }
   }
 };
 </script>
