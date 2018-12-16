@@ -93,6 +93,7 @@
           <v-btn flat to="/signin" v-if="!loggedIn">Log In</v-btn>
           <v-btn flat to="/signup" v-if="!loggedIn">Sign Up</v-btn>
           <v-btn flat to="/Profile" v-if="loggedIn">My Page</v-btn>
+          <v-btn flat to="/create-event" v-if="loggedIn">Create Event</v-btn>
           <v-btn flat v-on:click="signout" v-if="loggedIn">Log Out</v-btn>
         </v-toolbar-items>
       </v-layout>
