@@ -4,8 +4,7 @@
           <v-img          
           :src="currentEvent.image"   
           max-height="300"
-        >             
-
+        >           
         </v-img>
         <v-layout row wrap align-center>
           <v-flex>
