@@ -11,7 +11,7 @@
           <v-flex xs12>
             <v-text-field
               label="Event Name"
-              value="Gyoza Party"
+              :value="currentEvent.name"
               readonly="true"
             ></v-text-field>
           </v-flex>
@@ -19,7 +19,7 @@
           <v-flex xs12>
             <v-text-field
               label="Arriving Time"
-              value="2018/12/16 18:00"
+              :value="currentEvent.datetime"
               readonly="true"
             ></v-text-field>
           </v-flex>
@@ -44,7 +44,7 @@
           <v-flex xs12>
             <v-text-field
               label="Cancel before"
-              value="2018/12/16 10:00"
+              :value="currentEvent.datetime"
               readonly="true"
             ></v-text-field>
           </v-flex>
@@ -62,3 +62,39 @@
     </v-form>
   </v-content>
 </template>
+
+<script>
+import firebase from "firebase";
+import { mapGetters, mapActions } from "vuex";
+
+export default {
+  name: "ApplyEvent",
+
+  props: {
+    eventId: {
+      required: true,
+      type: String
+    }
+  },
+
+  computed: {
+    ...mapGetters({
+      event: "events/EVENT"
+    }),
+    currentEvent() {
+      return this.event(this.eventId);
+    }
+  },
+  created() {
+    if (!firebase.auth().currentUser) {
+      this.$router.push("/signin");
+    }
+    this.fetchEvent(this.eventId);
+  },
+  methods: {
+    ...mapActions({
+      fetchEvent: "events/FETCH_EVENT"
+    })
+  }
+};
+</script>

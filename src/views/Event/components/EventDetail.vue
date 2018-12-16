@@ -103,7 +103,7 @@ export default {
       fetchEvent: "events/FETCH_EVENT"
     })
   },
-  data () {
+  data() {
     return {
       title: 'Explore other events',
       posts: [
@@ -123,13 +123,13 @@ export default {
           imgUrl: 'https://muza-chan.net/aj/poze-weblog4/dango-big.jpg'
         }
       ]
+    };
   }
- }
-}</script>
+};
+</script>
 
 <style lang="scss">
 .content {
-    white-space: pre-wrap;
+  white-space: pre-wrap;
 }
 </style>
-
