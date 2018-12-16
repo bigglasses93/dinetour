@@ -13,6 +13,7 @@ import Homepage from "@/views/Homepage";
 import CreateEvent from "@/views/CreateEvent";
 import ApplyEvent from "@/views/ApplyEvent";
 import Contactus from "@/views/ContactUs";
+import Profile from "@/views/Profile";
 
 Vue.use(Router);
 
@@ -85,6 +86,11 @@ const router = new Router({
           path: "/contactus",
           name: "contactus",
           component: Contactus
+        },
+        {
+          path: "/profile",
+          name: "profile",
+          component: Profile
         }
       ]
     }
