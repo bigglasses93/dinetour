@@ -30,5 +30,11 @@ export default [
       "https://i.pinimg.com/564x/55/85/ce/5585cecd1f1643ba6610437690b7756d.jpg",
     datetime: "2019-01-30 18:00",
     description:"Big fan of beef?\nHere is your chance making traditional Gyudon by yourself with local Japanese families!\nCome one and join us now!"
-  }
+  },
+  {
+    id: 99,
+    name: "Coming soon",
+    image:
+      "https://www.hotboxpizza.com/wp-content/uploads/2018/03/comingsoon.jpg",
+  },
 ];
