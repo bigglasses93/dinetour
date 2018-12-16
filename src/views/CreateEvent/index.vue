@@ -76,7 +76,7 @@ export default{
   data: () => ({
     date: '2019-01-01',
     time: '00:00',
-    // host: "",
+    host: "Qk0rBoVPw9RFZwurRwap5W6A7AV2",
     image: "",
     name: "",
     numberofpeople: "",
@@ -92,7 +92,7 @@ export default{
         var formData = {
           date: this.date.toString(),
           time: this.time,
-          // host: "",
+          host: firebase.auth().currentUser.uid,
           image: this.image,
           name: this.name,
           numberofpeople: this.numberofpeople,
