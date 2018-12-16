@@ -38,6 +38,7 @@
             <v-flex>
               <v-btn v-on:click="signUp">Sign Up</v-btn>
             </v-flex>
+            
            </v-flex>
           </v-layout>
         </v-container>
