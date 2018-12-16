@@ -33,19 +33,25 @@
               label="Number of People"
             ></v-text-field>
           </v-flex>
+          <v-spacer></v-spacer>
 
           <v-flex xs12>
-            <v-textarea
+          <v-spacer></v-spacer>
+            <v-text-field
               name="message"
               label="Message to Host"
-            ></v-textarea>
+              placeholder="Hi,nice to meet you"
+              outline
+              height="200"
+              required
+            ></v-text-field>
           </v-flex>
 
           <v-flex xs12>
             <v-text-field
-              label="Cancel before"
-              :value="currentEvent.date.toString() + ` ` + currentEvent.time.toString()"
+              :value="`Remind： Cancel Before ` + currentEvent.date.toString() + ` ` + currentEvent.time.toString()"
               readonly
+              Solo
             ></v-text-field>
           </v-flex>
 
