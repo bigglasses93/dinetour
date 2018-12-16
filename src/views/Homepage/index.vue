@@ -14,7 +14,7 @@
       </v-carousel>
 
       <v-flex>
-        <div class="flex display-3">Share Table with Japanese People</div>"
+        <div class="flex display-3">Share Table with Japanese People</div>
         <div class="flex title">Enjoy food and meet new people in a Japanese house</div>
       </v-flex>
 
