@@ -25,6 +25,7 @@
                 <v-icon>face</v-icon>
                 <router-link to="/Profile">
                   <div class="subheading grey--text pt-1 pb-3">Kentarou</div>
+                  <div class="content text-xs-left grey--text pt-1 pb-3">{{ currentEvent.hostemail }}</div>
                 </router-link>
               </v-flex>
               
