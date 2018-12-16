@@ -81,7 +81,7 @@ export default {
           .then(user => {
             alert("Create account: ", this_ref.email);
             console.log(user);
-            this_ref.$router.push("/");
+            this_ref.$router.push("/Profile");
           })
           .catch(error => {
             alert(error.message);

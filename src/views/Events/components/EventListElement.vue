@@ -10,9 +10,9 @@
     
     <v-card-text v-text="event.name" class="headline"></v-card-text>
     <v-card-title>
-      {{event.date}}{{" "}}{{event.time}}
+      <v-icon>calendar_today</v-icon>{{event.date}}{{" "}}{{event.time}}
       <v-spacer></v-spacer>
-      Location: {{event.place}}
+      <v-icon>location_on</v-icon> {{event.place}}
     </v-card-title> 
     
   </v-card>
