@@ -77,7 +77,7 @@ export default{
     date: '2019-01-01',
     time: '00:00',
     host: "Qk0rBoVPw9RFZwurRwap5W6A7AV2",
-    hostemail: ""
+    hostemail: "",
     image: "",
     name: "",
     numberofpeople: "",
