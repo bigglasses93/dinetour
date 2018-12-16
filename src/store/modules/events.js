@@ -1,10 +1,6 @@
 import Vue from "vue";
-<<<<<<< HEAD
 import api from "@/api";
 import firebase from "firebase";
-=======
-// import api from "@/api";
->>>>>>> 9fdcec58bfd3a1f7612b71d533a529ab27ceef54
 
 const events = {
   namespaced: true,
