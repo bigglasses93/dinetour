@@ -1,11 +1,12 @@
+import { convertDateToString } from "@/filters/date-filter";
+import firebase from "firebase";
 import Vue from "vue";
 import Vuetify from "vuetify";
+import "vuetify/dist/vuetify.min.css";
 import App from "./App.vue";
 import router from "@/router";
 import store from "@/store";
-import "vuetify/dist/vuetify.min.css";
-import { convertDateToString } from "@/filters/date-filter";
-import firebase from "firebase";
+import fb_bind from "@/api/fb_bind";
 
 // Firebase initialization
 var config = {
@@ -25,7 +26,6 @@ Vue.filter("date", convertDateToString);
 Vue.config.productionTip = false;
 
 // Use a global variable to detect changes
-//window.g_loggedIn = false;
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     console.log("Logged in");
@@ -36,6 +36,9 @@ firebase.auth().onAuthStateChanged(function(user) {
     store.commit("shared/SET_LOGGEDIN", false);
   }
 });
+
+// Bind firebase to init model
+fb_bind.init(firebase, store);
 
 new Vue({
   router,
