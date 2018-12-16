@@ -76,6 +76,7 @@
 </template>
 
 <script>
+import firebase from "firebase";
 import { mapGetters, mapActions } from "vuex";
 export default {
   name: "EventDetail",

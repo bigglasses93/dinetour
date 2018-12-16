@@ -33,12 +33,13 @@
             ></v-text-field>
           </v-flex>
 
-          <v-layout row>
+          <v-layout>
             <v-flex xs4>
-              <v-date-picker v-model="date"></v-date-picker>
+              <v-date-picker v-model="date" ></v-date-picker>
             </v-flex>
+            <v-spacer></v-spacer>
             <v-flex xs4>
-              <v-time-picker v-model="time"></v-time-picker>
+              <v-time-picker v-model="time" landscape></v-time-picker>
             </v-flex>
             <v-spacer></v-spacer>
           </v-layout>

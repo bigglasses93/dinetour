@@ -1,5 +1,4 @@
 import Vue from "vue";
-// import api from "@/api";
 
 const events = {
   namespaced: true,
