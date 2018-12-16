@@ -55,7 +55,7 @@
         </router-link>
       </v-toolbar-title>
 
-      <v-flex xs12 sm6 md4>
+      <!-- <v-flex xs12 sm6 md4>
         <v-menu
           ref="menu"
           :close-on-content-click="false"
@@ -81,7 +81,7 @@
             <v-btn flat color="primary" @click="$refs.menu.save(date)">OK</v-btn>
           </v-date-picker>
         </v-menu>
-      </v-flex>
+      </v-flex> -->
 
 
       <v-spacer></v-spacer>

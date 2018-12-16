@@ -1,5 +1,5 @@
 <template>
-<v-content>
+  <v-content>
       <v-container>
         <v-layout row wrap align-center>
           <v-flex>
