@@ -26,5 +26,11 @@ export default [
     image:
       "https://i.pinimg.com/564x/55/85/ce/5585cecd1f1643ba6610437690b7756d.jpg",
     datetime: "2019-01-30 18:00"
-  }
+  },
+  {
+    id: 99,
+    name: "Coming soon",
+    image:
+      "https://www.hotboxpizza.com/wp-content/uploads/2018/03/comingsoon.jpg",
+  },
 ];
