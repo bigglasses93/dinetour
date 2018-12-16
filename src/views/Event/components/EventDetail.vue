@@ -21,7 +21,7 @@
               <div class="subheading text-xs-center grey--text pt-1 pb-3">{{ currentEvent.datetime }}</div>
               <div class="content text-xs-left grey--text pt-1 pb-3">{{ currentEvent.description }}</div>
               <v-layout justify-space-between>
-                <v-btn outline to="/apply-event" color="indigo">Apply Now!</v-btn>
+                <v-btn outline :to="`/apply-event/${eventId}`" color="indigo">Apply Now!</v-btn>
                 <v-btn outline color="indigo">Add to favorite</v-btn>
                 <!-- <a href="javascript:;" class="body-2">Home</a>
                 <a href="javascript:;" class="body-2">About</a>
@@ -105,24 +105,24 @@ export default {
   },
   data () {
     return {
-    title: 'Explore other events',
-    posts: [
+      title: 'Explore other events',
+      posts: [
         {
-        title: 'Healthy ingredients',
-        content: 'Fusce ullamcorper tellus sed maximus rutrum. Donec imperdiet ultrices maximus. Donec non tellus non neque pellentesque fermentum. Aenean in pellentesque urna.',
-        imgUrl: 'https://foodrevolution.org/wp-content/uploads/2018/04/blog-featured-diabetes-20180406-1330.jpg'
+          title: 'Healthy ingredients',
+          content: 'Fusce ullamcorper tellus sed maximus rutrum. Donec imperdiet ultrices maximus. Donec non tellus non neque pellentesque fermentum. Aenean in pellentesque urna.',
+          imgUrl: 'https://foodrevolution.org/wp-content/uploads/2018/04/blog-featured-diabetes-20180406-1330.jpg'
         },
         {
-        title: 'Oishi Sushi',
-        content: 'Donec vitae suscipit lectus, a luctus diam. Proin vitae felis gravida, lobortis massa sit amet, efficitur erat. Morbi vel ultrices nisi.',
-        imgUrl: 'https://i.ndtvimg.com/i/2016-04/japanese-food-625_625x406_81461928658.jpg'
+          title: 'Oishi Sushi',
+          content: 'Donec vitae suscipit lectus, a luctus diam. Proin vitae felis gravida, lobortis massa sit amet, efficitur erat. Morbi vel ultrices nisi.',
+          imgUrl: 'https://i.ndtvimg.com/i/2016-04/japanese-food-625_625x406_81461928658.jpg'
         },
         {
-        title: 'Dango lover',
-        content: 'At sagittis sapien vulputate. Vivamus laoreet lacus id magna rutrum dapibus. Donec vel pellentesque arcu. Maecenas mollis odio tempus felis elementum commodo.',
-        imgUrl: 'https://muza-chan.net/aj/poze-weblog4/dango-big.jpg'
+          title: 'Dango lover',
+          content: 'At sagittis sapien vulputate. Vivamus laoreet lacus id magna rutrum dapibus. Donec vel pellentesque arcu. Maecenas mollis odio tempus felis elementum commodo.',
+          imgUrl: 'https://muza-chan.net/aj/poze-weblog4/dango-big.jpg'
         }
-    ]
+      ]
   }
  }
 }</script>
