@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "@/views/Home";
+// import Home from "@/views/Home";
 import Users from "@/views/Users";
 import User from "@/views/User";
 import Layout from "@/views/Layout";
@@ -78,9 +78,10 @@ const router = new Router({
           component: Homepage
         },
         {
-          path: "/apply-event",
+          path: "/apply-event/:eventId",
           name: "apply-event",
-          component: ApplyEvent
+          component: ApplyEvent,
+          props: true
         },
         {
           path: "/contactus",
