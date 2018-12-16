@@ -92,7 +92,7 @@
           <v-btn flat to="/Contactus">Contact Us</v-btn>
           <v-btn flat to="/signin" v-if="!loggedIn">Log In</v-btn>
           <v-btn flat to="/signup" v-if="!loggedIn">Sign Up</v-btn>
-          <v-btn flat to="/Profile" v-if="loggedIn">My Page</v-btn>
+          <v-btn flat to="/Profile" v-if="loggedIn">{{userEmail}}</v-btn>
           <v-btn flat to="/create-event" v-if="loggedIn">Create Event</v-btn>
           <v-btn flat v-on:click="signout" v-if="loggedIn">Log Out</v-btn>
         </v-toolbar-items>
@@ -118,7 +118,14 @@ export default {
   computed: {
     ...mapGetters({
       loggedIn: "shared/LOGGEDIN"
-    })
+    }),
+    userEmail() {
+      if (this.loggedIn) {
+        return firebase.auth().currentUser.email;
+      } else {
+        return "My Page";
+      }
+    }
   },
   methods: {
     signout: function() {
