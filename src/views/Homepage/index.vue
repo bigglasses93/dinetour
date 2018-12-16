@@ -4,7 +4,7 @@
       <v-container>
         <v-layout column justify-center>
 
-      <v-carousel>
+      <v-carousel v-if="events">
         <router-link v-for="item in events" :key="item.id" :to="`/events/${item.id}`">
         <v-carousel-item
           :src="item.image"
@@ -102,7 +102,7 @@ export default {
     })
   },
   created() {
-    // console.log("ok");
+    console.log("ok");
     this.fetchEvents();
   },
   methods: {
