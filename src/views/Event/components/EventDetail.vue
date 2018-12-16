@@ -1,22 +1,14 @@
 <template>
-    <v-content>
+  <v-content>
       <v-container>
-          <v-img          
-          :src="currentEvent.image"   
-          max-height="300"
-        >           
-        </v-img>
         <v-layout row wrap align-center>
           <v-flex>
             <div class="text-xs-center">
-                
-              <!-- <v-avatar size="300">
-                  
-                <img
-                  
-                  src="https://raw.githubusercontent.com/vuetifyjs/docs/dev/static/doc-images/lists/1.jpg"
-                >
-              </v-avatar> -->
+              <v-img          
+              :src="currentEvent.image"   
+              max-height="300"
+              >           
+              </v-img>
               <div class="headline"><span style="font-weight:bold">{{ currentEvent.name }}</span></div>
               <div class="subheading text-xs-center grey--text pt-1 pb-3">{{ currentEvent.datetime }}</div>
               <div class="content text-xs-left grey--text pt-1 pb-3">{{ currentEvent.description }}</div>
@@ -132,4 +124,3 @@ export default {
     white-space: pre-wrap;
 }
 </style>
-
