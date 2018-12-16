@@ -1,6 +1,5 @@
 <template>
   <v-content>
-    <a id="_top"></a>
       <v-container>
         <v-layout row wrap align-center>
           <v-flex>
@@ -160,44 +159,43 @@
                   </v-card>
                 </v-flex> 
           </v-layout>
-          <v-btn class="v-btn v-btn--bottom v-btn--floating v-btn--fixed v-btn--right" fab dark color="black"><a href="#_top" style="color:white"><v-icon dark>keyboard_arrow_up</v-icon></a></v-btn>
       </v-container>
     </v-content>
 </template>
 
 <script>
 import firebase from "firebase";
-  export default {
-    data () {
-      //var database = firebase.database(); console.log("ok");
-      //host: firebase.auth().currentUser.uid;
-      //console.log(host);
-      //date: new Date().toISOString().substr(0, 10)
-      return {
-        dialog: false,
-        title: 'Your Logo',
-        posts: [
-          {
-            id:'_events',
-            title: 'Fusce ullamcorper tellus',
-            content: 'Fusce ullamcorper tellus sed maximus rutrum. Donec imperdiet ultrices maximus. Donec non tellus non neque pellentesque fermentum. Aenean in pellentesque urna.',
-            imgUrl: 'https://raw.githubusercontent.com/vuetifyjs/docs/dev/static/doc-images/cards/drop.jpg'
-            //imgUrl: database.ref('/events').host.image
-          },
-          {
-            // id:'_calendar',
-            title: 'Donec vitae suscipit lectus, a luctus diam.',
-            content: 'Donec vitae suscipit lectus, a luctus diam. Proin vitae felis gravida, lobortis massa sit amet, efficitur erat. Morbi vel ultrices nisi.',
-            imgUrl: 'https://raw.githubusercontent.com/vuetifyjs/docs/dev/static/doc-images/cards/docks.jpg'
-          },
-          {
-            // id:'_other',
-            title: 'Vestibulum condimentum quam',
-            content: 'At sagittis sapien vulputate. Vivamus laoreet lacus id magna rutrum dapibus. Donec vel pellentesque arcu. Maecenas mollis odio tempus felis elementum commodo.',
-            imgUrl: 'https://raw.githubusercontent.com/vuetifyjs/docs/dev/static/doc-images/cards/plane.jpg'
-          }
-        ]
-      }
-    }
+export default {
+  data () {
+    //var database = firebase.database(); console.log("ok");
+    //host: firebase.auth().currentUser.uid;
+    //console.log(host);
+    //date: new Date().toISOString().substr(0, 10)
+    return {
+      dialog: false,
+      title: 'Your Logo',
+      posts: [
+        {
+          id:'_events',
+          title: 'Fusce ullamcorper tellus',
+          content: 'Fusce ullamcorper tellus sed maximus rutrum. Donec imperdiet ultrices maximus. Donec non tellus non neque pellentesque fermentum. Aenean in pellentesque urna.',
+          imgUrl: 'https://raw.githubusercontent.com/vuetifyjs/docs/dev/static/doc-images/cards/drop.jpg'
+          //imgUrl: database.ref('/events').host.image
+        },
+        {
+          // id:'_calendar',
+          title: 'Donec vitae suscipit lectus, a luctus diam.',
+          content: 'Donec vitae suscipit lectus, a luctus diam. Proin vitae felis gravida, lobortis massa sit amet, efficitur erat. Morbi vel ultrices nisi.',
+          imgUrl: 'https://raw.githubusercontent.com/vuetifyjs/docs/dev/static/doc-images/cards/docks.jpg'
+        },
+        {
+          // id:'_other',
+          title: 'Vestibulum condimentum quam',
+          content: 'At sagittis sapien vulputate. Vivamus laoreet lacus id magna rutrum dapibus. Donec vel pellentesque arcu. Maecenas mollis odio tempus felis elementum commodo.',
+          imgUrl: 'https://raw.githubusercontent.com/vuetifyjs/docs/dev/static/doc-images/cards/plane.jpg'
+        }
+      ]
+    };
   }
- </script>
+};
+</script>

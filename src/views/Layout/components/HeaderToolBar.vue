@@ -98,6 +98,8 @@
         </v-toolbar-items>
       </v-layout>
     </v-toolbar>
+
+    <v-btn class="v-btn v-btn--bottom v-btn--floating v-btn--fixed v-btn--right" fab dark color="black" @click="$vuetify.goTo(`#_top`, options)"><v-icon dark>keyboard_arrow_up</v-icon></v-btn>
   </div>
 </template>
 
@@ -125,6 +127,13 @@ export default {
       } else {
         return "My Page";
       }
+    },
+    options() {
+      return {
+        duration: 500,
+        offset: -1000,
+        easing: "easeInOutCubic"
+      };
     }
   },
   methods: {

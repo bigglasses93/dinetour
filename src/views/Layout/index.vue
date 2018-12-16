@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="_top">
     <header-tool-bar/>
     <router-view/>
   </div>
