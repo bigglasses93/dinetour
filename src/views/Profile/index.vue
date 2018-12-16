@@ -132,7 +132,7 @@
 
                     </v-card-text>
                     <v-date-picker
-                    v-model="date"
+                    
                     full-width
                     landscape
                     class="mt-3"
@@ -166,9 +166,13 @@
 </template>
 
 <script>
+import firebase from "firebase";
   export default {
     data () {
-      date: new Date().toISOString().substr(0, 10)
+      //var database = firebase.database(); console.log("ok");
+      //host: firebase.auth().currentUser.uid;
+      //console.log(host);
+      //date: new Date().toISOString().substr(0, 10)
       return {
         dialog: false,
         title: 'Your Logo',
@@ -178,6 +182,7 @@
             title: 'Fusce ullamcorper tellus',
             content: 'Fusce ullamcorper tellus sed maximus rutrum. Donec imperdiet ultrices maximus. Donec non tellus non neque pellentesque fermentum. Aenean in pellentesque urna.',
             imgUrl: 'https://raw.githubusercontent.com/vuetifyjs/docs/dev/static/doc-images/cards/drop.jpg'
+            //imgUrl: database.ref('/events').host.image
           },
           {
             // id:'_calendar',

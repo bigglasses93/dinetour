@@ -10,7 +10,24 @@
               >           
               </v-img>
               <div class="headline"><span style="font-weight:bold">{{ currentEvent.name }}</span></div>
-              <div class="subheading text-xs-center grey--text pt-1 pb-3">{{ currentEvent.datetime }}</div>
+              
+              <v-flex class="text-xs-left">
+              <v-icon>calendar_today</v-icon>
+              <div class="subheading grey--text pt-1 pb-3">{{ currentEvent.date + " " + currentEvent.time }}</div>
+              </v-flex>
+
+              <v-flex class="text-xs-left">
+              <v-icon>location_on</v-icon>
+              <div class="subheading grey--text pt-1 pb-3">{{ currentEvent.place }}</div>
+              </v-flex>
+
+              <v-flex class="text-xs-left">
+                <v-icon>face</v-icon>
+                <router-link to="/Profile">
+                  <div class="subheading grey--text pt-1 pb-3">Kentarou</div>
+                </router-link>
+              </v-flex>
+              
               <div class="content text-xs-left grey--text pt-1 pb-3">{{ currentEvent.description }}</div>
               <v-layout justify-space-between>
                 <v-btn outline :to="`/apply-event/${eventId}`" color="indigo">Apply Now!</v-btn>

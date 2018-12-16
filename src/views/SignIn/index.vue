@@ -44,7 +44,7 @@ export default {
         .then(
           () => {
             alert("Success!");
-            this.$router.push("/");
+            this.$router.push("/Profile");
           },
           err => {
             alert(err.message);
