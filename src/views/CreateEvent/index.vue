@@ -105,7 +105,7 @@ export default{
         
         //console.log(newevent.key);
         alert("Created event successfuly.");
-        this.$router.push("/");
+        this.$router.push("/events");
       }
     }
   }
