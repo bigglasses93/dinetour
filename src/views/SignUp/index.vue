@@ -1,13 +1,13 @@
 <template>
   <div>
       <v-content>
-        <v-container grid-list-xs text-xs-center>
-          <v-layout column >
-            <v-flex xs10 offset-xs1>
+        <v-container fill-height>
+          <v-layout justify-center align-center>
+            <v-flex xs12 sm8 md4>
               <v-card dark color="black">
                 <v-card-text><h2>Create your own account</h2></v-card-text>
               </v-card>
-
+              
             <v-flex>
                 <v-text-field
                   v-model="email"
