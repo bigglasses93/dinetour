@@ -1,13 +1,9 @@
 <template>
-  <div>
-    <v-content>
-      <v-container fill-height>
-        <v-layout justify-center align-center>
-          <event-detail :eventId="eventId"></event-detail>
-        </v-layout>
-      </v-container>
-    </v-content>
-  </div>
+  <v-content>
+    <event-detail :eventId="eventId">
+      </event-detail>
+  </v-content>  
+  
 </template>
 
 <script>

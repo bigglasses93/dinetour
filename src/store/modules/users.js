@@ -1,5 +1,5 @@
 import Vue from "vue";
-import api from "@/api";
+// import api from "@/api";
 
 const users = {
   namespaced: true,
@@ -8,12 +8,12 @@ const users = {
   },
   actions: {
     FETCH_USERS({ commit }) {
-      const response = api.fetchUsers();
-      commit("RECEIVE_USERS", response);
+      // const response = api.fetchUsers();
+      // commit("RECEIVE_USERS", response);
     },
     FETCH_USER({ commit }, uid) {
-      const response = api.fetchUser(uid);
-      commit("RECEIVE_USER", response);
+      // const response = api.fetchUser(uid);
+      // commit("RECEIVE_USER", response);
     }
   },
   getters: {

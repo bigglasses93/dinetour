@@ -1,5 +1,4 @@
 import Vue from "vue";
-import api from "@/api";
 
 const events = {
   namespaced: true,
@@ -8,12 +7,12 @@ const events = {
   },
   actions: {
     FETCH_EVENTS({ commit }) {
-      const response = api.fetchEvents();
-      commit("RECEIVE_EVENTS", response);
+      // const response = api.fetchEvents();
+      // commit("RECEIVE_EVENTS", response);
     },
-    FETCH_EVENT({ commit }, uid) {
-      const response = api.fetchEvent(uid);
-      commit("RECEIVE_EVENT", response);
+    FETCH_EVENT({ commit }, eventId) {
+      // const response = api.fetchEvent(eventId);
+      // commit("RECEIVE_EVENT", response);
     }
   },
   getters: {

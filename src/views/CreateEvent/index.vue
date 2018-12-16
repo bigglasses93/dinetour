@@ -33,12 +33,21 @@
             ></v-text-field>
           </v-flex>
 
-          <v-layout row>
+          <v-flex xs2>
+            <v-text-field
+              v-model="image"
+              label="Post photo url here"
+              prepend-icon="image"
+            ></v-text-field>
+          </v-flex>
+
+          <v-layout>
             <v-flex xs4>
-              <v-date-picker v-model="date"></v-date-picker>
+              <v-date-picker v-model="date" ></v-date-picker>
             </v-flex>
+            <v-spacer></v-spacer>
             <v-flex xs4>
-              <v-time-picker v-model="time"></v-time-picker>
+              <v-time-picker v-model="time" landscape></v-time-picker>
             </v-flex>
             <v-spacer></v-spacer>
           </v-layout>
@@ -68,7 +77,7 @@ export default{
     date: '2019-01-01',
     time: '00:00',
     // host: "",
-    // image: "",
+    image: "",
     name: "",
     numberofpeople: "",
     place: "",
@@ -84,13 +93,15 @@ export default{
           date: this.date.toString(),
           time: this.time,
           // host: "",
-          // image: this.image,
+          image: this.image,
           name: this.name,
           numberofpeople: this.numberofpeople,
           place: this.place,
           description: this.description
         };
-        database.ref("events").push(formData);
+        var newevent = database.ref("events").push(formData);
+        
+        //console.log(newevent.key);
         alert("Created event successfuly.");
         this.$router.push("/");
       }

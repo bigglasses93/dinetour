@@ -7,7 +7,7 @@
               <v-card dark color="black">
                 <v-card-text><h2>Create your own account</h2></v-card-text>
               </v-card>
-
+              
             <v-flex>
                 <v-text-field
                   v-model="email"
@@ -38,6 +38,7 @@
             <v-flex>
               <v-btn v-on:click="signUp">Sign Up</v-btn>
             </v-flex>
+            
            </v-flex>
           </v-layout>
         </v-container>

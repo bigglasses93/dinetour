@@ -14,6 +14,7 @@
 // @ is an alias to /src
 import EventList from "./components/EventList.vue";
 import { mapGetters, mapActions } from "vuex";
+import firebase from "firebase";
 
 export default {
   name: "Events",
@@ -26,8 +27,11 @@ export default {
     })
   },
   created() {
-    console.log("ok");
     this.fetchEvents();
+    var database = firebase.database();
+    var events = database.ref('events/1');
+    console.log(events);
+
   },
   methods: {
     ...mapActions({

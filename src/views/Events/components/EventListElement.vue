@@ -1,20 +1,22 @@
 <template>
   <v-card
+    width="500" 
     hover
     :to="`/events/${event.id}`"
   >
-
-    <v-card-actions>
-      <v-icon>event</v-icon>
-      <v-card-title v-text="event.name"></v-card-title>
-    </v-card-actions>
-
-    <v-card-actions>
-      <v-icon>datetime</v-icon>
-      <v-card-title v-text="event.datetime"></v-card-title>
-    </v-card-actions>
+    <v-img :src="event.image" max-height="200" align-center>    
+      
+    </v-img>
+    
+    <v-card-text v-text="event.name" class="headline"></v-card-text>
+    <v-card-title>
+      {{event.date}}{{" "}}{{event.time}}
+      <v-spacer></v-spacer>
+      Location: {{event.place}}
+    </v-card-title> 
     
   </v-card>
+  
 </template>
 
 <script>

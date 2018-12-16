@@ -11,16 +11,16 @@
           <v-flex xs12>
             <v-text-field
               label="Event Name"
-              value="Gyoza Party"
-              readonly="true"
+              :value="currentEvent.name"
+              readonly
             ></v-text-field>
           </v-flex>
 
           <v-flex xs12>
             <v-text-field
               label="Arriving Time"
-              value="2018/12/16 18:00"
-              readonly="true"
+              :value="currentEvent.date.toString() + ` ` + currentEvent.time.toString()"
+              readonly
             ></v-text-field>
           </v-flex>
 
@@ -44,8 +44,8 @@
           <v-flex xs12>
             <v-text-field
               label="Cancel before"
-              value="2018/12/16 10:00"
-              readonly="true"
+              :value="currentEvent.date.toString() + ` ` + currentEvent.time.toString()"
+              readonly
             ></v-text-field>
           </v-flex>
 
@@ -54,7 +54,7 @@
           ></v-checkbox>
 
           <v-flex xs12>
-            <v-btn color="primary">Apply for the Event</v-btn>
+            <v-btn color="primary" @click="submit">Apply for the Event</v-btn>
           </v-flex>
 
         </v-layout>
@@ -62,3 +62,42 @@
     </v-form>
   </v-content>
 </template>
+
+<script>
+import firebase from "firebase";
+import { mapGetters, mapActions } from "vuex";
+
+export default {
+  name: "ApplyEvent",
+
+  props: {
+    eventId: {
+      required: true,
+      type: String
+    }
+  },
+
+  computed: {
+    ...mapGetters({
+      events: "events/EVENT"
+    }),
+    currentEvent() {
+      return this.events(this.eventId);
+    }
+  },
+  created() {
+    if (!firebase.auth().currentUser) {
+      this.$router.push("/signin");
+    }
+    this.fetchEvent(this.eventId);
+  },
+  methods: {
+    ...mapActions({
+      fetchEvent: "events/FETCH_EVENT"
+    }),
+    submit() {
+      this.$router.push("/events/" + this.eventId.toString());
+    }
+  }
+};
+</script>
