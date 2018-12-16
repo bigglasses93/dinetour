@@ -9,7 +9,11 @@
     </v-img>
     
     <v-card-text v-text="event.name" class="headline"></v-card-text>
-    <v-card-text v-text="event.datetime"></v-card-text>  
+    <v-card-title>
+      {{event.date}}{{" "}}{{event.time}}
+      <v-spacer></v-spacer>
+      Location: {{event.place}}
+    </v-card-title> 
     
   </v-card>
   
