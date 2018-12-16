@@ -11,7 +11,7 @@
             <v-flex>
                 <v-text-field
                   v-model="email"
-                  :rules="[rules.required, rules.email]"
+                  :rules="[rules.email]"
                   label="E-mail"
                 ></v-text-field>
             </v-flex>
@@ -50,18 +50,20 @@ import firebase from "firebase";
 export default {
   name: "SignUp",
   data() {
+    var this_ref = this;
     return {
-      email: null,
-      password: null,
-      confirm_password: null,
+      email: "",
+      password: "",
+      confirm_password: "",
       agree: false,
       rules: {
-        passwordMatch: () => {
+        passwordMatch: function() {
           return (
-            this.password == this.confirm_password || "Password does not match."
+            this_ref.password == this_ref.confirm_password ||
+            "Password does not match."
           );
         },
-        email: value => {
+        email: function(value) {
           const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
           return pattern.test(value) || "Invalid e-mail.";
         }
@@ -71,13 +73,14 @@ export default {
   methods: {
     signUp: function() {
       if (this.agree && this.password == this.confirm_password) {
+        var this_ref = this;
         firebase
           .auth()
           .createUserWithEmailAndPassword(this.email, this.password)
           .then(user => {
-            alert("Create account: ", this.email);
+            alert("Create account: ", this_ref.email);
             console.log(user);
-            this.$router.push("/signin");
+            this_ref.$router.push("/");
           })
           .catch(error => {
             alert(error.message);
