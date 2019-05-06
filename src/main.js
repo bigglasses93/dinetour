@@ -10,7 +10,7 @@ import fb_bind from "@/api/fb_bind";
 
 // Firebase initialization
 var config = {
-  apiKey: "AIzaSyD5Vt4l1NtzSWhPRHn362bUr1pcFnOo5WE",
+  apiKey: "",
   authDomain: "project1-bd116.firebaseapp.com",
   databaseURL: "https://project1-bd116.firebaseio.com",
   projectId: "project1-bd116",
